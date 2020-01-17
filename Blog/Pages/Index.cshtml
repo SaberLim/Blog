@@ -2,11 +2,8 @@
 @using Microsoft.AspNetCore.Mvc.Localization
 @using Microsoft.AspNetCore.Builder
 @using Microsoft.AspNetCore.Http.Features
-@using Microsoft.AspNetCore.Localization
-@using Microsoft.Extensions.Options
-@inject IViewLocalizer Localizer
-@inject IOptions<RequestLocalizationOptions> LocOptions
 
+@inject IViewLocalizer Localizer
 @model IndexModel
 @{
     ViewData["Title"] = Localizer["Home page"];
@@ -16,4 +13,3 @@
     <h1 class="display-4">@Localizer["Hello"]</h1>
     <p>@Localizer["Learn about"] <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
-
