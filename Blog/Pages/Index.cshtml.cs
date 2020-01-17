@@ -23,9 +23,7 @@ namespace Blog.Pages
 
         }
 
-
-    
-        public IActionResult OnPost(string culture,string returnUrl)
+        public IActionResult OnPostSetLanguage(string culture,string returnUrl)
         {
             Response.Cookies.Append(
                 CookieRequestCultureProvider.DefaultCookieName,
