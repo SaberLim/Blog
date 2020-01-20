@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-using Blog.Resources;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,18 +28,10 @@ namespace Blog
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddSingleton<IdentityLocalizationService>();
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.AddMvc()
              .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
-             .AddDataAnnotationsLocalization(options =>
-             {
-                 options.DataAnnotationLocalizerProvider = (type, factory) =>
-                 {
-                     var assemblyName = new AssemblyName(typeof(IdentityResource).GetTypeInfo().Assembly.FullName);
-                     return factory.Create("IdentityResource", assemblyName.Name);
-                 };
-             });
+             .AddDataAnnotationsLocalization();
             services.Configure<RequestLocalizationOptions>(options =>
             {
                 var supportedCultures = new List<CultureInfo>

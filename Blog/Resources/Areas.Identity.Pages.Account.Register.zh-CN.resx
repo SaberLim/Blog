@@ -117,25 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Confirm password" xml:space="preserve">
-    <value>再次确认密码</value>
-  </data>
-  <data name="ConfirmPassword" xml:space="preserve">
-    <value>再次确认密码</value>
-  </data>
-  <data name="Create a new account." xml:space="preserve">
-    <value>创建新账号</value>
-  </data>
-  <data name="Email" xml:space="preserve">
-    <value>邮箱</value>
-  </data>
-  <data name="Password" xml:space="preserve">
-    <value>密码</value>
-  </data>
-  <data name="The Email field is not a valid email address" xml:space="preserve">
-    <value>不合法的值</value>
-  </data>
-  <data name="The Email field is required." xml:space="preserve">
-    <value>需要邮箱字段</value>
+  <data name="Register" xml:space="preserve">
+    <value>注册</value>
   </data>
 </root>
